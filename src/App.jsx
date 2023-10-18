@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Dashboard from "./pages/Dashboard";
-import Login from "./pages/Login";
-import Layout from "./components/layout/Layout"
+import { Dashboard, Login } from "./pages";
+import Layout from "./components/Layout";
+import { pages } from "./data";
 
 function App() {
   return (
@@ -9,10 +9,10 @@ function App() {
       <Routes>
         <Route element={<Layout />}>
           {/*user routes - after login */}
-          <Route path="/" element={<Dashboard />} />
+          <Route path={pages.dashboard.route} element={<Dashboard />} />
         </Route>
         {/* public routes - before login */}
-        <Route path="/login" element={<Login/>}/>
+        <Route path="/login" element={<Login />} />
       </Routes>
     </Router>
   );

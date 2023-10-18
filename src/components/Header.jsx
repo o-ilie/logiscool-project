@@ -1,8 +1,8 @@
-import logo from "../../../public/assets/images/logo.svg";
+import logo from "/assets/images/logo.svg";
 
 const Header = () => {
   return (
-    <nav className="fixed top-0 z-50 w-full bg-white border-b border-gray-200 ">
+    <header className="z-50 w-full bg-white border-b border-base-300 header">
       <div className="px-3 py-3 lg:px-5 lg:pl-3">
         <div className="flex items-center justify-between">
           <div className="flex items-center justify-start">
@@ -11,7 +11,7 @@ const Header = () => {
               data-drawer-toggle="logo-sidebar"
               aria-controls="logo-sidebar"
               type="button"
-              className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
             >
               <span className="sr-only">Open sidebar</span>
               <svg
@@ -29,12 +29,7 @@ const Header = () => {
               </svg>
             </button>
             <a href="/" className="flex ml-2 md:mr-24">
-              <img
-                src={logo}
-                style={{height: '3.5rem'}}
-                className="mr-3"
-                alt="Logo"
-              />
+              <img src={logo} className="mr-3 h-14" alt="Logo" />
             </a>
           </div>
           <div className="flex items-center">
@@ -115,7 +110,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-    </nav>
+    </header>
   );
 };
 
