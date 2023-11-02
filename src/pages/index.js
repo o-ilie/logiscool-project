@@ -1,7 +1,5 @@
 import Dashboard from "./Dashboard";
-import Login from "./Login";
+import LoginPage from "./LoginPage";
+import Sessions from "./Sessions";
 
-export {
-    Dashboard,
-    Login
-}
+export { Dashboard, LoginPage, Sessions };

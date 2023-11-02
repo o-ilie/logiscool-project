@@ -1,0 +1,62 @@
+.grid-template {
+  display: flex;
+  flex-wrap: wrap;
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 80px 1fr;
+  grid-template-columns: 250px 1fr;
+  grid-template-areas:
+    "header header"
+    "nav main";
+}
+.header {
+  grid-area: header;
+}
+.sidebar {
+  grid-area: nav;
+}
+.content-wrapper {
+  grid-area: main;
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  .grid-template {
+    grid-template-areas:
+      "header"
+      "main";
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px calc(100% - 80px);
+  }
+  .sidebar {
+    grid-area: unset;
+  }
+}
+
+.title {
+  @apply text-3xl text-primary-dark font-semibold;
+}
+
+.subtitle {
+  @apply text-xl text-primary-dark font-bold;
+}
+
+.card {
+  @apply bg-white rounded-2xl p-6 text-base-500 shadow-xl;
+}
+
+.rts___btn {
+  border-radius: 100% !important;
+  width: 4rem;
+  height: 4rem;
+  padding: 0 !important;
+  font-size: 2rem;
+  border: 1px solid var(--primary-light) !important;
+  @apply ring-1 ring-primary-light ring-offset-2;
+}
+
+.rts___tab___selected {
+  background-color: var(--primary-light) !important;
+}
